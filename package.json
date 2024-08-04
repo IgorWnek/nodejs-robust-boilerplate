@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-robust-boilerplate",
+  "version": "1.0.0",
+  "description": "Robust Node.js Boilerplate with TypeScript and ESM",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "esm",
+    "boilerplate"
+  ],
+  "author": "Igor Wnek",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
