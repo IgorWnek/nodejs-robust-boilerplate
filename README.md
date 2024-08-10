@@ -33,7 +33,7 @@ A robust Node.js boilerplate with TypeScript and ESM support, designed to kickst
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/nodejs-robust-boilerplate.git
+git clone https://github.com/IgorWnek/nodejs-robust-boilerplate.git
 cd nodejs-robust-boilerplate
 ```
 
