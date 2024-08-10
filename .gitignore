@@ -16,4 +16,5 @@ dist/
 .env.local
 .env.*.local
 
-
+# ESLint cache
+.eslintcache
