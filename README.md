@@ -54,7 +54,7 @@ pnpm install
 ```text
 nodejs-robust-boilerplate/
 ├── src/
-│   ├── index.ts
+│   ├─ index.ts
 │   └── hello-world.ts
 ├── test/
 │   └── hello-world.test.ts
@@ -76,14 +76,36 @@ TypeScript is configured in the `tsconfig.json` file. Key settings include:
 ```json:tsconfig.json
 {
   "compilerOptions": {
-    "target": "esm",
-    "module": "commonjs",
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
     "sourceMap": true,
-    "outDir": "build",
-    "rootDir": "src"
-  }
+    "resolveJsonModule": true,
+    "lib": ["ES2022"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "test", "**/*.test.ts"]
 }
 ```
+
+This configuration:
+
+- Sets the target to `ES2022`, allowing the use of modern JavaScript features
+- Uses `ESNext` module system for better compatibility with ESM
+- Enables `strict` mode for stronger type checking
+- Generates source maps for easier debugging
+- Outputs compiled files to the `./dist` directory
+- Specifies `./src` as the root directory for source files
+- Includes all files in the `src` directory
+- Excludes `node_modules`, `dist`, `test`, and test files from compilation
+
+These settings ensure a modern, strict TypeScript setup optimized for Node.js development with ESM support.
 
 ### ESLint
 
