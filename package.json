@@ -7,7 +7,10 @@
     "node": ">=22.0.0"
   },
   "scripts": {
-    "test": "node --test --loader ts-node/esm test/**/*.test.ts",
+    "dev": "tsx src/index.ts",
+    "dev:watch": "tsx watch src/index.ts",
+    "dev:debug": "tsx debug src/index.ts",
+    "test": "tsx --test test/**/*.test.ts",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
   },
@@ -27,7 +30,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "prettier": "^3.3.3",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.17.0",
     "typescript": "^5.5.4"
   }
 }
