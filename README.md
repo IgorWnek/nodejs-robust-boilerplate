@@ -9,13 +9,11 @@ A robust Node.js boilerplate with TypeScript and ESM support, designed to kickst
 - ✅ Prettier for code formatting
 - ✅ Node.js built-in test runner for unit testing
 - ✅ Node.js v22+ support
-
-## Planned Features
-
-- [ ] Docker setup
-  - [ ] Development Dockerfile
+- ✅ Docker setup
+  - ✅ Development Dockerfile
+  - ✅ docker-compose.yml for local development
   - [ ] Production-ready Dockerfile
-  - [ ] docker-compose.yml
+- [ ] [Taskfile](https://taskfile.dev/) for running scripts
 - [ ] GitHub Actions for CI/CD
   - [ ] Run linters
   - [ ] Run tests
@@ -26,7 +24,8 @@ A robust Node.js boilerplate with TypeScript and ESM support, designed to kickst
 ### Prerequisites
 
 - Node.js (v22.0.0 or higher)
-- pnpm (v8.0.0 or higher recommended)
+- pnpm (v9.7.0 or higher recommended)
+- Docker and Docker Compose (for containerized development)
 
 ### Installation
 
@@ -42,6 +41,24 @@ cd nodejs-robust-boilerplate
 ```bash
 pnpm install
 ```
+
+### Running the Application
+
+#### Locally
+
+- Run the application: `pnpm run dev`
+- Run the application in watch mode: `pnpm run dev:watch`
+- Run the application in debug mode: `pnpm run dev:debug`
+
+#### Using Docker
+
+1. Build and start the Docker container:
+
+```bash
+docker-compose up --build
+```
+
+2. The application will be available at `http://localhost:3000`
 
 ### Scripts
 
